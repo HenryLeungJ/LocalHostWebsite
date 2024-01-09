@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/posts" class="nav-link active">Post</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact us</a></li>
+            <li class="nav-item"><a href="/delete" class="nav-link text-light bg-danger">Delete All</a></li>
+          </ul>
+          </ul>
+        </header>
+      </div>
+
+      <div class="parent">
+        <div class="contact layer">
+            <div class="innerContact" style="width: 80%; height: 80%;">
+            <h2 style="margin-bottom: auto; margin-top: 5%;">Make a Post!</h2>
+            <form action="/posts" method="POST" class="mt-0">
+                <input type="text" placeholder="name" name="name" style="width: 70%">
+                <input type="text" placeholder="title" name="title" style="width: 70%">
+                <textarea name="content" id="message" placeholder="message" style="width: 70%; height: 40%"></textarea>
+                <input type="submit">
+            </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

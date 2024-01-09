@@ -1,0 +1,128 @@
+<%- include("partials/header.ejs") %>
+<style>
+    body {
+    height: 100%;
+}
+.links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img.icon {
+    display: inline-block;
+    height: 1em;
+    margin: 0 0 -0.1em 0.3em;
+}
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.contact {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.parent {
+    display: grid;
+    height: fit-content;
+}
+
+.innerContact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    justify-content: start;
+    align-items: center;
+}
+
+.posts {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
+form {
+    display: flex;
+    gap: 2%;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-align {
+    align-self: end;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.bubble {
+    width: 100%;
+    height: 100%;
+}
+
+.noHeight {
+    height: 5%;
+}
+</style>
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/posts" class="nav-link active">Post</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact us</a></li>
+            <li class="nav-item"><a href="/delete" class="nav-link text-light bg-danger">Delete All</a></li>
+          </ul>
+          </ul>
+        </header>
+      </div>
+
+      <div class="parent">
+        <div class="contact layer">
+            <div class="innerContact" style="width: 80%; height: 80%;">
+            <h2 style="margin-bottom: auto; margin-top: 5%;">Make An Edit:</h2>
+            <form action="/posts" method="POST" class="mt-0">
+                <input type="text" placeholder="title" name="title" value="<%= title%>" style="width: 70%">
+                <input type="text" placeholder="name" name="name" value="<%=name%>" style="width: 70%">
+                <textarea name="content" id="message" value="<%=content%>" style="width: 70%; height: 40%"></textarea>
+                <input type="submit">
+            </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
